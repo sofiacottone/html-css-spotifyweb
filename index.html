@@ -22,7 +22,7 @@
 <body>
     <main>
         <div class="container d-flex">
-            <div class="aside-nav d-flex flex-column">
+            <div class="aside-nav d-flex flex-column justify-content-between">
                 <div class="logo p-b-20">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 340" class="spotify-logo--text">
@@ -34,7 +34,7 @@
                 </div>
                 <nav class="main-aside-nav">
                     <ul>
-                        <li>
+                        <li class="home text-white">
                             <a href="#">
                                 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -97,7 +97,7 @@
                     </ul>
                 </div>
                 <div class="aside-bottom">
-                    <div class="d-flex align-items-center">
+                    <div class="install d-flex align-items-center">
                         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Download icon</title>
                             <path
@@ -115,12 +115,14 @@
                                     fill="#ffffff" fill-rule="evenodd" />
                             </svg>
                         </div>
-                        <span>Sofia C.</span>
+                        <span class="bold text-white"><a href="#">Sofia C.</a></span>
                     </div>
                 </div>
             </div>
             <div class="main-view">
-                <header></header>
+                <header class="d-flex justify-content-end align-items-center">
+                    <button class="upgrade-btn uppercase">Effettua l'upgrade</button>
+                </header>
                 <nav class="main-view-nav">
                     <ul class="d-flex gap-20 justify-content-center">
                         <li>
