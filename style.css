@@ -452,6 +452,12 @@ h3 {
     color: #fff;
 }
 
+.playlist-nav,
+.aside-bottom span,
+.main-view-nav {
+    font-size: .875rem;
+}
+
 /* #endregion GENERAL */
 /* #region HEADER */
 header {
@@ -528,9 +534,6 @@ header {
 }
 
 /*--- playlist ---*/
-.playlist-nav {
-    font-size: .875rem;
-}
 
 .playlist-nav .add-btn {
     margin-block: .625rem;
@@ -566,7 +569,6 @@ header {
 
 .aside-bottom span {
     margin-left: .375rem;
-    font-size: .875rem;
 }
 
 .profile {
@@ -603,6 +605,25 @@ header {
     background-color: var(--main-bg);
     width: 80%;
     height: calc(100vh - 90px);
+}
+
+.main-view-nav {
+    padding-block: 20px;
+}
+
+.main-view-nav ul li:first-child {
+    position: relative;
+
+}
+
+.main-view-nav ul li:first-child::after {
+    content: '\f2d1';
+    font-family: 'FontAwesome';
+    color: var(--lime);
+    font-size: 1.7rem;
+    position: absolute;
+    top: 0;
+    left: 30px;
 }
 
 .song-box {
