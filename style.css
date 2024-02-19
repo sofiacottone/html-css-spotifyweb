@@ -416,3 +416,34 @@ body {
 }
 
 /* #endregion GENERAL */
+/* #region HEADER */
+header {
+    background-color: green;
+    width: 100%;
+    height: 90px;
+}
+
+/* #endregion HEADER */
+/* #region MAIN */
+.aside-nav {
+    background-color: red;
+    width: 20%;
+    height: calc(100vh - 90px);
+
+}
+
+.main-view {
+    background-color: blue;
+    width: 80%;
+    height: calc(100vh - 90px);
+
+}
+
+/* #endregion MAIN */
+/* #region FOOTER */
+footer {
+    background-color: aquamarine;
+    height: 90px;
+}
+
+/* #endregion FOOTER */
