@@ -211,6 +211,11 @@ li {
     margin  
 ------------------*/
 /* 20 */
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+/* 20 */
 .m-y-20 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -308,6 +313,10 @@ li {
 .p-y-20 {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.p-t-20 {
+    padding-top: 20px;
 }
 
 .p-b-20 {
@@ -417,6 +426,8 @@ li {
 
 body {
     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--gray);
 }
 
 .main-view-container {
@@ -433,24 +444,132 @@ body {
     margin-bottom: 90px;
 }
 
+/*------------------
+    TYPOGRAPHY 
+-------------------*/
+h2,
+h3 {
+    color: #fff;
+}
+
 /* #endregion GENERAL */
 /* #region HEADER */
 header {
-    background-color: green;
+    /* background-color: green; */
+    background-color: #080b12;
     width: 100%;
-    height: 60px;
+    height: 70px;
 }
 
 /* #endregion HEADER */
 /* #region MAIN */
+
+/*------------ 
+    ASIDE  
+-------------*/
 .aside-nav {
-    background-color: red;
+    /* background-color: red; */
+    background-color: #000;
+    min-width: 230px;
     width: 20%;
     height: calc(100vh - 90px);
+    padding: 20px;
 }
 
+.aside-nav .logo svg {
+    fill: #fff;
+    max-width: 9rem;
+}
+
+.main-aside-nav {
+    min-width: 230px;
+}
+
+.main-aside-nav li {
+    padding-block: 4px;
+}
+
+.main-aside-nav li a span {
+    vertical-align: text-top;
+    font-size: 0.9rem;
+}
+
+.main-aside-nav li svg {
+    max-width: 1.25rem;
+    fill: #d2d2d2;
+}
+
+/*--- playlist ---*/
+.playlist-nav {
+    font-size: .875rem;
+}
+
+.playlist-nav .add-btn {
+    margin-block: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #a3a3a3;
+    font-size: 1.875rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    cursor: pointer;
+}
+
+.playlist-list li {
+    padding-bottom: 1.25rem;
+}
+
+/*--- /playlist ---*/
+/*--- aside bottom ---*/
+.aside-bottom {
+    width: 90%;
+    margin: auto auto 0;
+}
+
+.aside-bottom svg {
+    fill: #d2d2d2;
+    max-width: 1.25rem;
+    padding-bottom: .375rem;
+}
+
+.aside-bottom span {
+    margin-left: .375rem;
+    font-size: .875rem;
+}
+
+.profile {
+    border-top: .0625rem solid;
+    padding-block: .375rem;
+}
+
+.profile-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: var(--gray);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-icon svg {
+    display: block;
+    margin: auto;
+    max-width: 1.375rem;
+    padding-top: .25rem;
+}
+
+
+/*--- /aside bottom ---*/
+
+/*------------ 
+    /ASIDE  
+-------------*/
+/*---------------- 
+    MAIN VIEW  
+----------------*/
 .main-view {
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: var(--main-bg);
     width: 80%;
     height: calc(100vh - 90px);
 }
@@ -461,11 +580,16 @@ header {
     border: 1px solid;
 }
 
+/*---------------- 
+    /MAIN VIEW  
+----------------*/
 
 /* #endregion MAIN */
 /* #region FOOTER */
 footer {
     background-color: aquamarine;
+    background-color: #282828;
+    width: 100%;
     height: 90px;
     position: sticky;
     bottom: 0;
