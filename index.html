@@ -334,8 +334,8 @@
                 </button>
             </div>
         </div>
-        <div class="playback-controls text-white">
-            <div class="controls">
+        <div class="playback-controls text-white text-center">
+            <div class="controls p-b-10">
                 <button class="fa-btn p-r-20">
                     <i class="fa-solid fa-shuffle"></i>
                 </button>
@@ -352,9 +352,15 @@
                     <i class="fa-solid fa-arrow-rotate-right"></i>
                 </button>
             </div>
-            <div class="playback-progress"></div>
+            <div class="d-flex gap-20 align-items-center">
+                <span class="playback-time">0:25</span>
+                <div class="playback-progress">
+                    <div class="progress"></div>
+                </div>
+                <span class="playback-time">4:35</span>
+            </div>
         </div>
-        <div class="more-controls text-white">
+        <div class="more-controls text-white d-flex align-items-center gap-20">
             <button class="fa-btn">
                 <i class="fa-solid fa-list"></i>
             </button>
@@ -364,6 +370,9 @@
             <button class="fa-btn">
                 <i class="fa-solid fa-volume-high"></i>
             </button>
+            <div class="volume">
+                <div class="volume-progress"></div>
+            </div>
         </div>
     </footer>
 </body>

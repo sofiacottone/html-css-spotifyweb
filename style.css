@@ -448,6 +448,7 @@ body {
 
 .container {
     height: calc(100vh - 5.625rem);
+    overflow-y: hidden;
 }
 
 .main-view-container {
@@ -483,7 +484,8 @@ h3 {
 .playlist-nav,
 .aside-bottom span,
 .main-view-nav,
-.playing-song>.song-details {
+.playing-song>.song-details,
+.playback-controls .playback-time {
     font-size: .875rem;
 }
 
@@ -504,6 +506,7 @@ header {
     padding: .625rem 2.25rem;
     font-size: .75rem;
     margin-right: .375rem;
+    cursor: pointer;
 }
 
 /* #endregion HEADER */
@@ -577,7 +580,7 @@ header {
     cursor: pointer;
 }
 
-.playlist-list {
+.playlist-nav {
     overflow-y: auto;
 }
 
@@ -648,7 +651,7 @@ header {
 
 }
 
-.main-view-nav ul li:first-child::after {
+/* .main-view-nav ul li:first-child::after {
     content: '\f2d1';
     font-family: 'FontAwesome';
     color: var(--lime);
@@ -656,6 +659,15 @@ header {
     position: absolute;
     top: 0;
     left: 30px;
+} */
+.main-view-nav ul li:first-child::after {
+    content: '';
+    width: 50%;
+    border-bottom: 2px solid var(--lime);
+    border-radius: 4px;
+    position: absolute;
+    bottom: -8px;
+    left: 26px;
 }
 
 .song-box {
@@ -697,9 +709,27 @@ footer .playback-controls .play {
 }
 
 .playback-progress {
-    max-width: 28.125rem;
+    width: 28.125rem;
     height: 4px;
     background-color: var(--gray);
+}
+
+.playback-progress>.progress {
+    width: 20%;
+    height: 100%;
+    background-color: #c1c1c1;
+}
+
+.volume {
+    width: 7.5rem;
+    height: 4px;
+    background-color: var(--gray);
+}
+
+.playback-progress>.progress {
+    width: 20%;
+    height: 100%;
+    background-color: #c1c1c1;
 }
 
 /* #endregion FOOTER */
