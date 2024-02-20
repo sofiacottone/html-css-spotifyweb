@@ -453,8 +453,6 @@ body {
 
 .main-view-container {
     padding-inline: 20px;
-    overflow: auto;
-    max-height: 100%;
 }
 
 .row {
@@ -492,10 +490,10 @@ h3 {
 /* #endregion GENERAL */
 /* #region HEADER */
 header {
-    /* background-color: green; */
     background-color: #080b12;
     width: 100%;
     height: 70px;
+    opacity: 60%;
 }
 
 .upgrade-btn {
@@ -516,12 +514,9 @@ header {
     ASIDE  
 -------------*/
 .aside-nav {
-    /* background-color: red; */
     background-color: #000;
-    max-width: 14.375rem;
-    width: 20%;
+    width: 14.375rem;
     flex-shrink: 0;
-    /* height: calc(100vh - 90px); */
     padding: 1.25rem 1.25rem .375rem;
 }
 
@@ -555,12 +550,21 @@ header {
     fill: #d2d2d2;
 }
 
-.main-aside-nav .home::before {
+/* .main-aside-nav .home::before {
     content: '\f2d1';
     font-family: 'FontAwesome';
     color: var(--lime);
     font-size: 1.7rem;
     transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: -20px;
+} */
+.main-aside-nav::before {
+    content: '';
+    border-left: 4px solid var(--lime);
+    border-radius: 4px;
+    height: 36%;
     position: absolute;
     top: 0;
     left: -20px;
@@ -580,7 +584,7 @@ header {
     cursor: pointer;
 }
 
-.playlist-nav {
+.playlist-list {
     overflow-y: auto;
 }
 
@@ -640,6 +644,14 @@ header {
 .main-view {
     background-color: var(--main-bg);
     width: 100%;
+    overflow-y: auto;
+}
+
+.top-view {
+    position: sticky;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1px);
 }
 
 .main-view-nav {
@@ -683,7 +695,6 @@ header {
 /* #endregion MAIN */
 /* #region FOOTER */
 footer {
-    /* background-color: aquamarine; */
     background-color: #282828;
     width: 100%;
     height: 5.625rem;
