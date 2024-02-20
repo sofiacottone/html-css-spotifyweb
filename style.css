@@ -304,6 +304,14 @@ li {
     padding-bottom: 10px;
 }
 
+.p-r-10 {
+    padding-right: 10px;
+}
+
+.p-l-10 {
+    padding-left: 10px;
+}
+
 /* 20 */
 .p-x-20 {
     padding-left: 20px;
@@ -321,6 +329,14 @@ li {
 
 .p-b-20 {
     padding-bottom: 20px;
+}
+
+.p-r-20 {
+    padding-right: 20px;
+}
+
+.p-l-20 {
+    padding-left: 20px;
 }
 
 /* 30 */
@@ -430,6 +446,10 @@ body {
     color: var(--gray);
 }
 
+.container {
+    height: calc(100vh - 5.625rem);
+}
+
 .main-view-container {
     padding-inline: 20px;
     overflow: auto;
@@ -444,6 +464,14 @@ body {
     margin-bottom: 90px;
 }
 
+.fa-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+}
+
 /*------------------
     TYPOGRAPHY 
 -------------------*/
@@ -454,7 +482,8 @@ h3 {
 
 .playlist-nav,
 .aside-bottom span,
-.main-view-nav {
+.main-view-nav,
+.playing-song>.song-details {
     font-size: .875rem;
 }
 
@@ -486,9 +515,10 @@ header {
 .aside-nav {
     /* background-color: red; */
     background-color: #000;
-    min-width: 14.375rem;
+    max-width: 14.375rem;
     width: 20%;
-    height: calc(100vh - 90px);
+    flex-shrink: 0;
+    /* height: calc(100vh - 90px); */
     padding: 1.25rem 1.25rem .375rem;
 }
 
@@ -547,6 +577,10 @@ header {
     cursor: pointer;
 }
 
+.playlist-list {
+    overflow-y: auto;
+}
+
 .playlist-list li {
     padding-bottom: 1.25rem;
 }
@@ -601,10 +635,8 @@ header {
     MAIN VIEW  
 ----------------*/
 .main-view {
-    /* background-color: blue; */
     background-color: var(--main-bg);
-    width: 80%;
-    height: calc(100vh - 90px);
+    width: 100%;
 }
 
 .main-view-nav {
@@ -639,14 +671,36 @@ header {
 /* #endregion MAIN */
 /* #region FOOTER */
 footer {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     background-color: #282828;
     width: 100%;
     height: 5.625rem;
+    padding-inline: .625rem;
     position: sticky;
     bottom: 0;
     left: 0;
     z-index: 10;
 }
 
+.playing-song .song-img {
+    width: 2.9rem;
+    height: 2.9rem;
+    border: 1px solid;
+}
+
+footer .playback-controls button {
+    font-size: 1.25rem;
+}
+
+footer .playback-controls .play {
+    font-size: 1.875rem;
+}
+
+.playback-progress {
+    max-width: 28.125rem;
+    height: 4px;
+    background-color: var(--gray);
+}
+
 /* #endregion FOOTER */
+/* transform: scale(1.04); */
