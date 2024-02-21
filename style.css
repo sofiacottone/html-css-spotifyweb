@@ -789,6 +789,47 @@ footer {
     padding-bottom: .25rem;
 }
 
+.song-actions .like-btn .like-checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 1;
+}
+
+.song-actions .like-btn {
+    position: relative;
+}
+
+.like-checkbox:checked~i.fa-heart {
+    color: red;
+}
+
+/* tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 6.25rem;
+    background-color: #00000090;
+    color: #fff;
+    text-align: center;
+    border-radius: .375rem;
+    padding-block: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* /tooltip  */
+
 /* hover  */
 .song-details .author:hover {
     color: #fff;
@@ -868,7 +909,7 @@ footer {
 }
 
 .volume>.volume-progress {
-    width: 40%;
+    width: 60%;
     height: 100%;
     background-color: #c1c1c1;
     border-radius: 4px;
@@ -943,6 +984,47 @@ footer {
 
     .more-controls.gap-20 {
         gap: 10px;
+    }
+}
+
+/* | Smartphone-xs view - bonus | */
+@media screen and (max-width: 500px) {
+    .main-view-container .row {
+        text-align: center;
+    }
+
+    .main-view-container .row .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* footer  */
+    footer .playing-song {
+        width: 20%;
+    }
+
+    footer .playing-song .song-details {
+        display: none;
+    }
+
+    footer .playback-controls {
+        width: 60%;
+    }
+
+    footer .more-controls {
+        flex-direction: column;
+        font-size: .75rem;
+        position: relative;
+        width: 20%;
+    }
+
+    footer .more-controls .volume {
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 30px;
+        left: 44px;
+        width: 60%;
     }
 }
 
