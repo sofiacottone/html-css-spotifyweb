@@ -668,7 +668,7 @@ header .upgrade-btn:hover {
 }
 
 .main-view-nav {
-    padding-block: 20px;
+    padding: 20px 10px;
 }
 
 .main-view-nav ul li:first-child {
@@ -697,7 +697,7 @@ header .upgrade-btn:hover {
     max-width: 12.5rem;
 }
 
-.song-img {
+.row .song-img {
     position: relative;
 }
 
@@ -727,7 +727,7 @@ header .upgrade-btn:hover {
 }
 
 .song-box .layer>i {
-    font-size: 50px;
+    font-size: 3.125rem;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -766,7 +766,6 @@ footer {
 .playing-song .song-img {
     width: 2.9rem;
     height: 2.9rem;
-    border: 1px solid;
     aspect-ratio: 1;
 }
 
@@ -774,8 +773,12 @@ footer {
     width: 50%;
 }
 
+.song-details .song-name {
+    padding-bottom: .25rem;
+}
+
 /* hover  */
-.song-details .song-name:hover {
+.song-details .author:hover {
     color: #fff;
     text-decoration: underline;
 }
@@ -800,17 +803,17 @@ footer {
 }
 
 /* /hover  */
-/* progress circle  */
+/* progress thumb  */
 .playback-progress .progress>i,
 .more-controls .volume .volume-progress>i {
-    font-size: 14px;
+    font-size: .875rem;
     position: absolute;
     top: -5px;
     right: 0;
     display: none;
 }
 
-/* /progress circle  */
+/* /progress thumb  */
 .playback-controls {
     max-width: 33.75rem;
     width: 50%;
